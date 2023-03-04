@@ -5,10 +5,30 @@ The project was written in JavaScript, HTML, and CSS.
 All code and images were created within 24 hours during the hackathon.
 
 ## Project Requirements
-- [ ] As a user, I would like a main menu to display first with the name of the game
-- [ ] As a user, I would like a button on the main menu which allows me to start the game
-- [ ] As a user, I would like a button on the main menu which allows me to view the instructions page
-- [ ] As a user, I would like a button on the instructions page which allows me to return to the main menu
-- [ ] ...
+- There should be a main menu with the name of the game
+- There should be an instructions page teaching players how to play
+- In game, there should be two characters. Each is controllable by a player.
+  - Player 1 moves their character by using WASD.
+  - Player 2 moves their character by using the arrow keys.
+- The players can place bombs which explode after a fixed amount of time.
+  - Player 1 places a bomb by pressing Space Bar.
+  - Player 2 places a bomb by pressing Enter.
+- Players are given 3 lives per game.
+- If a player is near a bomb when the bomb explodes, the player will loses a life.
+- The last player standing wins the game.
+
+The following items will be addressed if time permits:
+- A single game should not be longer than 3-5 minutes. If no winner is found by the end of that time frame, a draw is declared.
+- In the last minute of the game, a border should start filling in around the edges of the map forcing players towards the center.
+- Crates will be placed randomly around the map (excluding corners where players spawn). Crates may contain one of the following powerups inside them:
+  - An additional bomb.
+  - A more powerful bomb.
+  - A boost to the player's speed
+  - the ability to kick bombs by walking into them after they have been placed
+  - The ability to throw bombs by pressing space while standing on top of a bomb that has been placed
+- Score is calculated based off of the amount of time remaining in a round.
+- A high scores page can be added to the main menu to keep track of high scores
+- A song should be added during gameplay
+- There should be audio playing when a bomb explodes
 
 ## Schedule
