@@ -14,13 +14,14 @@ All code and images were created within 24 hours during the hackathon.
   - Player 1 places a bomb by pressing Space Bar.
   - Player 2 places a bomb by pressing Enter.
 - Players are given 3 lives per game.
-- If a player is near a bomb when the bomb explodes, the player will loses a life.
+- If a player is near a bomb when the bomb explodes, the player will lose a life.
 - The last player standing wins the game.
 
 The following items will be addressed if time permits:
 - A single game should not be longer than 3-5 minutes. If no winner is found by the end of that time frame, a draw is declared.
 - In the last minute of the game, a border should start filling in around the edges of the map forcing players towards the center.
-- Crates will be placed randomly around the map (excluding corners where players spawn). Crates may contain one of the following powerups inside them:
+- Crates will be placed randomly around the map (excluding corners where players spawn) separating players from each other. 
+- Some crates may contain one of the following powerups inside them:
   - An additional bomb.
   - A more powerful bomb.
   - A boost to the player's speed
