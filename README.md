@@ -4,6 +4,10 @@ It is a clone of the multiplayer game mode of the NES game *Super Bomberman 2*.
 The project was written in JavaScript, HTML, and CSS. 
 All code and images were created within 24 hours during the hackathon.
 
+### Color Scheme
+- Background color: `#a56074`
+- Text color: 
+
 ## Project Requirements
 - [x] ~~As a user, I would like a main menu to display first with the name of the game~~
 - [ ] As a user, I would like a button on the main menu which allows me to start the game
