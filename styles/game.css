@@ -117,7 +117,12 @@ p {
 	font-size: 3vh;
 	margin: 3vh;
 }
-
+.credits {
+	color: var(--tan);
+}
+h1.credits {
+	font-weight: bold;
+}
 
 #game .screen {
     width: 100%;
