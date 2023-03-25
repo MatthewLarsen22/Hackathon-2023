@@ -1,4 +1,4 @@
-MyGame.screens['credits'] = (function(manager) {
+MyGame.screens['instructions'] = (function(manager) {
     'use strict';
     document.getElementById('goBackButton').addEventListener(
         'click',
