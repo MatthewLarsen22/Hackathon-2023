@@ -31,7 +31,7 @@
 			<div id="credits" class="screen blue_bkg">
 				<div class = "flexbox">
 					<span style = "width:100px"> 
-						<button id="instructionsBackButton" class="back">
+						<button id="creditsBackButton" class="back">
 							<img src="assets/backarrow.png" alt="back arrow" width = "50" height="40"></img>
 						</button>
 					</span>
@@ -40,10 +40,46 @@
 					<span style = "width: 100px"></span>
 				</div>
 			</div>
+
+
+
+
+
+
+
+
+
+			<div id="instructionsmp" class="screen blue_bkg" style="padding:50px">
+				<div class = "flexbox">
+					<span style = "width:100px"> 
+						<button id="mpinstBB" class="back">
+							<img src="assets/backarrow.png" alt="back arrow" width = "50" height="40"></img>
+						</button>
+					</span>
+
+					<div style = "flex:1; text-align: center;"><h1>instructions:</h1></div>
+					<span style = "width: 100px"></span>
+				</div>
+				<div class="mp">
+					<button id="spButton" style = "color: #F06723">single player</button>
+					<button id="mpB">multiplayer</button>
+				</div>
+				<div id = "mpcontrols" class="flexbox">
+					<div><h1>Player 1</h1><img src="assets/p1controls.png" width="250" height="300"></img></div>
+					<div><h1>Player 2</h1><img src="assets/p2controls.png" width="250" height="300"></img></div>
+					<div><h1>Player 3</h1><img src="assets/p3controls.png" width="250" height="300"></img></div>
+					<div><h1>Player 4</h1><img src="assets/p4controls.png" width="250" height="300"></img></div>
+				</div>
+			</div>
+
+
+
+
+
 			<div id="instructions" class="screen blue_bkg" style="padding:50px">
 				<div class = "flexbox">
 					<span style = "width:100px"> 
-						<button id="iBB" class="back">
+						<button id="instBB" class="back">
 							<img src="assets/backarrow.png" alt="back arrow" width = "50" height="40"></img>
 						</button>
 					</span>
@@ -53,9 +89,9 @@
 				</div>
 				<div class="mp">
 					<button style = "color: #F06723">single player</button>
-					<button>multiplayer</button>
+					<button id=mpButton>multiplayer</button>
 				</div>
-				<div class="inst">
+				<div id = "spcontrols" class="inst">
 					<div>
 						<p class = "title">Controls:</p>
 						<p class = "title"><img src = "assets/singleplayer-instructions.png" alt="instructions" width="350" height="300"></img></p>
@@ -135,6 +171,7 @@
 
 		<script src="scripts/screens/manager.js"></script>
 		<script src="scripts/screens/instructions.js"></script>
+		<script src="scripts/screens/instructionsmp.js"></script>
 		<script src="scripts/screens/mainmenu.js"></script>
 		<script src="scripts/screens/gameplay.js"></script>
 		<script src="scripts/screens/highscores.js"></script>
