@@ -1,30 +1,31 @@
 MyGame.objects.SmolAngryBoi = function(spec) {
+    let id = spec.id;
     let direction = 'down';
     let availableEggs = 1;
-
+    let collisionLevel = 1;
     function moveUp(elapsedTime) {
         direction = 'up';
         let proposedPosition = { x: spec.center.x, y: spec.center.y - (spec.moveRate * elapsedTime)};
         if (! checkCollision(proposedPosition)) {
             spec.center.y = proposedPosition.y;
         }
-        else {
-            let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
-            let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
-
-            if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) > 0.7){
-                moveRight(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) < 0.3){
-                moveLeft(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) > 0.55) {
-                moveLeft(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) < 0.45) {
-                moveRight(elapsedTime);
-            }
-        }
+        // else {
+        //     let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
+        //     let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
+        //
+        //     if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) > 0.7){
+        //         moveRight(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) < 0.3){
+        //         moveLeft(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) > 0.55) {
+        //         moveLeft(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) < 0.45) {
+        //         moveRight(elapsedTime);
+        //     }
+        // }
     }
     function moveDown(elapsedTime) {
         direction = 'down';
@@ -32,23 +33,23 @@ MyGame.objects.SmolAngryBoi = function(spec) {
         if (! checkCollision(proposedPosition)) {
             spec.center.y = proposedPosition.y;
         }
-        else {
-            let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
-            let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
-
-            if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) > 0.7){
-                moveRight(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) < 0.3){
-                moveLeft(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) > 0.55) {
-                moveLeft(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) < 0.45) {
-                moveRight(elapsedTime);
-            }
-        }
+        // else {
+        //     let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
+        //     let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
+        //
+        //     if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) > 0.7){
+        //         moveRight(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileX) < 0.3){
+        //         moveLeft(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) > 0.55) {
+        //         moveLeft(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) < 0.45) {
+        //         moveRight(elapsedTime);
+        //     }
+        // }
     }
 
     function moveLeft(elapsedTime) {
@@ -57,23 +58,23 @@ MyGame.objects.SmolAngryBoi = function(spec) {
         if (! checkCollision(proposedPosition)) {
             spec.center.x = proposedPosition.x;
         }
-        else {
-            let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
-            let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
-
-            if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) > 0.7){
-                moveDown(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) < 0.3){
-                moveUp(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) > 0.55) {
-                moveUp(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) < 0.45) {
-                moveDown(elapsedTime);
-            }
-        }
+        // else {
+        //     let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
+        //     let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
+        //
+        //     if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) > 0.7){
+        //         moveDown(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) < 0.3){
+        //         moveUp(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) > 0.55) {
+        //         moveUp(elapsedTime);
+        //     }
+        //     else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) < 0.45) {
+        //         moveDown(elapsedTime);
+        //     }
+        // }
     }
 
     function moveRight(elapsedTime) {
@@ -86,23 +87,19 @@ MyGame.objects.SmolAngryBoi = function(spec) {
             let proposedTileX = proposedPosition.x / MyGame.constants.TILE_WIDTH;
             let proposedTileY = proposedPosition.x / MyGame.constants.TILE_HEIGHT;
 
-            if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) > 0.7){
-                moveDown(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileY - Math.floor(proposedTileY) < 0.3){
-                moveUp(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) > 0.55) {
-                moveUp(elapsedTime);
-            }
-            else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileY - Math.floor(proposedTileY) < 0.45) {
-                moveDown(elapsedTime);
-            }
+            // if (spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileY) > 0.7){
+            //     moveDown(elapsedTime);
+            // }
+            // else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 1 && proposedTileX - Math.floor(proposedTileY) < 0.3){
+            //     moveUp(elapsedTime);
+            // }
+            // else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) > 0.55) {
+            //     moveUp(elapsedTime);
+            // }
+            // else if(spec.grid[Math.floor(proposedTileY)][Math.floor(proposedTileX)] === 0 && proposedTileX - Math.floor(proposedTileX) < 0.45) {
+            //     moveDown(elapsedTime);
+            // }
         }
-    }
-
-    function layEgg() {
-
     }
 
     function checkCollision(proposedPosition) {
@@ -111,9 +108,9 @@ MyGame.objects.SmolAngryBoi = function(spec) {
         let y = proposedPosition.y / MyGame.constants.TILE_HEIGHT;
 
         // Check to see if the chicken collides with any of the neighboring cells
-        for (let row = 0; row < MyGame.constants.TILES_PER_COL; row++){
-            for (let column = 0; column < MyGame.constants.TILES_PER_ROW; column++){
-                if (spec.grid[row][column] === 1){
+        for (let row = 0; row < MyGame.constants.TILES_PER_ROW; row++){
+            for (let column = 0; column < MyGame.constants.TILES_PER_COL; column++){
+                if (spec.grid[column][row] > collisionLevel){
                     let r1 = {
                         left: row * MyGame.constants.TILE_WIDTH,
                         right: (row + 1) * MyGame.constants.TILE_WIDTH,
@@ -135,12 +132,24 @@ MyGame.objects.SmolAngryBoi = function(spec) {
         return false;
     }
     function layEgg() {
-        if (availableEggs > 0){
-            console.log("attempting to lay egg");
+        let location = { x: Math.floor(spec.center.x / MyGame.constants.TILE_WIDTH), y: Math.floor(spec.center.y / MyGame.constants.TILE_HEIGHT) };
+
+        if (spec.grid[location.y][location.x] === 0 && availableEggs > 0) {
+            availableEggs -= 1;
+            spec.reportEvent({
+                type: 'lay-egg',
+                id,
+                location
+            });
         }
     }
 
+    function returnEgg() {
+        availableEggs += 1;
+    }
+
     let api = {
+        get id() { return spec.id; },
         get size() { return spec.size; },
         get center() { return spec.center; },
         get rotation() { return spec.rotation; },
@@ -148,7 +157,9 @@ MyGame.objects.SmolAngryBoi = function(spec) {
         moveUp: moveUp,
         moveDown: moveDown,
         moveLeft: moveLeft,
-        moveRight: moveRight
+        moveRight: moveRight,
+        layEgg: layEgg,
+        returnEgg: returnEgg
     };
 
     return api;
