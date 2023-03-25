@@ -1,8 +1,8 @@
 MyGame.render.Background = function(graphics){
     let subTextureWidth = 0
     let subTextureHeight = 0;
-    let tileHeight = MyGame.constants.CANVAS_HEIGHT / MyGame.constants.TILES_PER_COL;
-    let tileWidth = tileHeight;
+    let tileHeight = MyGame.constants.TILE_HEIGHT;
+    let tileWidth = MyGame.constants.TILE_WIDTH;
     let tileSize = { x: tileWidth, y: tileHeight };
 
     let image = new Image();
@@ -29,11 +29,11 @@ MyGame.render.Background = function(graphics){
                     tileIndex = 0;
                     rotation = 90;
                 }
-                else if (i === MyGame.constants.TILES_PER_COL - 1 && j === 0) {
+                else if (i === MyGame.constants.TILES_PER_COL - 1 && j === MyGame.constants.TILES_PER_ROW - 1) {
                     tileIndex = 0;
                     rotation = 180;
                 }
-                else if (i === MyGame.constants.TILES_PER_COL - 1 && j === MyGame.constants.TILES_PER_ROW - 1) {
+                else if (i === MyGame.constants.TILES_PER_COL - 1 && j === 0) {
                     tileIndex = 0;
                     rotation = 270;
                 }
@@ -55,11 +55,11 @@ MyGame.render.Background = function(graphics){
                     tileIndex = 2;
                     rotation = 90;
                 }
-                else if (i === MyGame.constants.TILES_PER_COL - 2 && j === 1) {
+                else if (i === MyGame.constants.TILES_PER_COL - 2 && j === MyGame.constants.TILES_PER_ROW - 2) {
                     tileIndex = 2;
                     rotation = 180;
                 }
-                else if (i === MyGame.constants.TILES_PER_COL - 2 && j === MyGame.constants.TILES_PER_ROW - 2) {
+                else if (i === MyGame.constants.TILES_PER_COL - 2 && j === 1) {
                     tileIndex = 2;
                     rotation = 270;
                 }
