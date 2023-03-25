@@ -7,12 +7,12 @@ MyGame.screens['mainMenu'] = (function(manager){
             function() { manager.showScreen('gamePlay'); }
         );
 
-        document.getElementById('highScores').addEventListener(
+        document.getElementById('highScoresButton').addEventListener(
             'click',
             function() { manager.showScreen('highScores'); }
         );
 
-        document.getElementById('credits').addEventListener(
+        document.getElementById('creditsButton').addEventListener(
             'click',
             function() { manager.showScreen('credits'); }
         );
