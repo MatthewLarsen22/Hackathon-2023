@@ -1,9 +1,10 @@
-MyGame.screens['gamePlay'] = (function(graphics){
+MyGame.screens['gamePlay'] = (function(input, graphics){
     'use strict';
 
     let lastTimeStamp = performance.now();
     let cancelNextRequest = true;
 
+    let myKeyboard = input.Keyboard();
     let model = null;
 
     function processInput(elapsedTime) {
@@ -47,4 +48,4 @@ MyGame.screens['gamePlay'] = (function(graphics){
         initialize: initialize,
         run: run
     };
-}(MyGame.graphics));
+}(MyGame.input, MyGame.graphics));
