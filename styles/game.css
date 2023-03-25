@@ -1,25 +1,44 @@
 body {
     font-family: "Quicksand";
 }
-
-#mainMenu {
-	background-color: #425D8D;
-	color: red;
-	text-align: center;
-	height: 100vh;
-}
 button {
+    font-family: "Quicksand";
 	background-color: #D9D5CE;
 	color: #C19952;
-	border-radius: 10px;
-	font-size: 20px;
-	height: 30px;
-	width: 200px;
-	border-width: 0px;
+	border-radius: 1vh;
+	font-size: 2.5vh;
+	height: 4vh;
+	width: 15vw;
+	border-width: 1px;
+	margin-right: 6vw;
+	margin-left: 6vw;
 }
-ul {
+button.play{
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;
+	color: #F3D846;
+	font-size: 7vh;
+	font-weight: bold;
+	width: 33vw;
+	height: 9vh;
+}
+h1.settings {
+	text-align: right;
+}
+button.settings{
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;	
+	font-size: 2vh;
+	margin-right: 0vw;
+	margin-left: 0vw;
+}
+li {
 	display: inline;
 }
+li.play{
+	display: block;
+}
+
 
 #game .screen {
     width: 100%;
@@ -29,4 +48,10 @@ ul {
 
 #game .screen.active {
     display: block;
+}
+#mainMenu {
+	background-color: #425D8D;
+	color: red;
+	text-align: center;
+	height: 100vh;
 }
