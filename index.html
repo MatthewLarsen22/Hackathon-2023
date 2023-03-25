@@ -11,15 +11,24 @@
 		<link rel="stylesheet" type="text/css" href="styles/game.css">
 	</head>
 	<body>
-		<div id="mainScreen">
+		<div id="mainMenu">
 			<h1>Bomberman Clone</h1>
 			<ul>
 				<button id="playGame">Play Game</button><br>
-				<button id="highScore">High Score</button><br>
+				<button id="highScores">High Score</button><br>
 				<button id="instructions">Instructions</button><br>
 				<button id="credits">Credits</button><br>
 			</ul>
 		</div>
+		<script>
+			let MyGame = {
+				screens: {},
+				input: {},
+				objects: {},
+				render: {},
+				constants: {}
+			};
+		</script>
 
 		<script src="scripts/screens/mainmenu.js"></script>
 	</body>
