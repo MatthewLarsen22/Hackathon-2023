@@ -120,8 +120,9 @@ p {
 .credits {
 	color: var(--tan);
 }
-h1.credits {
-	font-weight: bold;
+h1.credits{
+	font-weight: bolder;
+	text-align: center;
 }
 
 #game .screen {
