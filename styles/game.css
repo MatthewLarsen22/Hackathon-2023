@@ -1,5 +1,6 @@
 body {
     font-family: "Quicksand";
+    margin: 0px;
 }
 button {
     font-family: "Quicksand";
@@ -37,6 +38,9 @@ li {
 }
 li.play{
 	display: block;
+}
+.blue_bkg {
+	background: #425D8D;
 }
 
 
