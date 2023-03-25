@@ -3,7 +3,20 @@ body {
 }
 
 #mainMenu {
-	background-color: blue;
+	background-color: #425D8D;
 	color: red;
 	text-align: center;
+	height: 100vh;
+}
+button {
+	background-color: #D9D5CE;
+	color: #C19952;
+	border-radius: 10px;
+	font-size: 20px;
+	height: 30px;
+	width: 200px;
+	border-width: 0px;
+}
+ul {
+	display: inline;
 }
