@@ -1,6 +1,10 @@
 body {
     font-family: "Quicksand";
+}
+body, html {
     margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
 }
 button {
     font-family: "Quicksand";
@@ -41,6 +45,9 @@ li.play{
 }
 .blue_bkg {
 	background: #425D8D;
+	display: flex;
+	align-content: stretch;
+	min-height: 100vh;
 }
 
 
