@@ -1,3 +1,11 @@
+:root {
+	--blue: #425D8D;
+	--yellow: #F3D846;
+	--gray: #D9D5CE;
+	--tan: #C19952;
+	--orange: #F06723;
+	--green: #7AC582;
+}
 body {
     font-family: "Quicksand";
 }
@@ -8,8 +16,8 @@ body, html {
 }
 button {
     font-family: "Quicksand";
-	background-color: #D9D5CE;
-	color: #C19952;
+	background-color: var(--gray);
+	color: var(--tan);
 	border-radius: 1vh;
 	font-size: 2.5vh;
 	height: 4vh;
@@ -21,7 +29,7 @@ button {
 button.play{
 	background-color: rgba(0,0,0,0.0);
 	border-width: 0px;
-	color: #F3D846;
+	color: var(--yellow);
 	font-size: 7vh;
 	font-weight: bold;
 	width: 33vw;
@@ -44,12 +52,15 @@ li.play{
 	display: block;
 }
 .blue_bkg {
-	background: #425D8D;
+	background: var(--blue);
+	color: var(--yellow);
 	display: flex;
 	align-content: stretch;
 	min-height: 100vh;
 }
-
+.center {
+	text-align: center;
+}
 
 #game .screen {
     width: 100%;
@@ -61,7 +72,7 @@ li.play{
     display: block;
 }
 #mainMenu {
-	background-color: #425D8D;
+	background-color: var(--blue);
 	color: red;
 	text-align: center;
 	height: 100vh;
