@@ -10,7 +10,6 @@ MyGame.manager = (function(screens) {
             active[screen].classList.remove('active');
         }
 
-        console.log(id);
         screens[id].run();
 
         document.getElementById(id).classList.add('active');
