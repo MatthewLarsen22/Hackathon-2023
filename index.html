@@ -11,18 +11,18 @@
 		<link rel="stylesheet" type="text/css" href="styles/game.css">
 	</head>
 	<body onload="MyGame.manager.initialize();">
-		<div id="game">
-			<div id="mainMenu" class="screen">
+		<div id="game" class="blue_bkg">
+			<div id="mainMenu" class="screen blue_bkg">
 				<h1 class="settings">
-					<button class="settings" id = "settingsButton">Settings</button>
+					<button class="settings" id = "settingsButton">settings</button>
 				</h1>
 					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<ul>
-					<li class="play"><button class="play"id="playGame">Play Game</button></li>
+					<li class="play"><button class="play"id="playGame">play game</button></li>
 					<br><br><br><br><br><br><br>
-					<li><button id="highScoresButton">High Score</button></li>
-					<li><button id="instructionsButton">Instructions</button></li>
-					<li><button id="creditsButton">Credits</button></li>
+					<li><button id="highScoresButton">high score</button></li>
+					<li><button id="instructionsButton">instructions</button></li>
+					<li><button id="creditsButton">credits</button></li>
 				</ul>
 			</div>
 			<div id="gamePlay" class="screen">
@@ -30,11 +30,15 @@
 			</div>
 			<div id="credits" class="screen blue_bkg">
 				<h1>Credits:</h1>
-				<button id="goBackButton">Go Back</button>
+				<button id="creditsBackButton">go back</button>
 			</div>
 			<div id="instructions" class="screen blue_bkg">
-				<h1>Instructions:</h1>
-				<button id="goBackButton">Go Back</button>
+				<h1>instructions:</h1>
+				<button id="instructionsBackButton">go back</button>
+			</div>
+			<div id="highScores" class="screen blue_bkg">
+				<h1>high score:</h1>
+				<button id="highScoresBackButton">go back</button>
 			</div>
 		</div>
 
