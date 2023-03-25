@@ -10,16 +10,22 @@
 
 		<link rel="stylesheet" type="text/css" href="styles/game.css">
 	</head>
-	<body>
-		<div id="mainMenu">
-			<h1>Bomberman Clone</h1>
-			<ul>
-				<button id="playGame">Play Game</button><br>
-				<button id="highScores">High Score</button><br>
-				<button id="instructions">Instructions</button><br>
-				<button id="credits">Credits</button><br>
-			</ul>
+	<body onload="MyGame.manager.initialize();">
+		<div id="game">
+			<div id="mainMenu" class="screen">
+				<h1>Bomberman Clone</h1>
+				<ul>
+					<li><button id="playGame">Play Game</button></li>
+					<li><button id="highScores">High Score</button></li>
+					<li><button id="instructions">Instructions</button></li>
+					<li><button id="credits">Credits</button></li>
+				</ul>
+			</div>
+			<div id="gamePlay" class="screen">
+				<canvas id="canvas" width="960" height="540"></canvas>
+			</div>
 		</div>
+
 		<script>
 			let MyGame = {
 				screens: {},
@@ -30,6 +36,11 @@
 			};
 		</script>
 
+		<script src="scripts/constants.js"></script>
+
+		<script src="scripts/render/graphics.js"></script>
+
+		<script src="scripts/screens/manager.js"></script>
 		<script src="scripts/screens/mainmenu.js"></script>
 	</body>
 </html>
