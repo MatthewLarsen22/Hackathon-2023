@@ -6,6 +6,16 @@
 	--orange: #F06723;
 	--green: #7AC582;
 }
+.blue_bkg {
+	background: var(--blue);
+	color: var(--yellow);
+	display: flex;
+	align-content: stretch;
+	min-height: 100vh;
+}
+.back {
+	padding: 15px;
+}
 body {
     font-family: "Quicksand";
 }
@@ -34,16 +44,60 @@ button.play{
 	font-weight: bold;
 	width: 33vw;
 	height: 9vh;
+	display: inline;
 }
-h1.settings {
-	text-align: right;
-}
-button.settings{
+
+button.settings {
 	background-color: rgba(0,0,0,0.0);
 	border-width: 0px;	
 	font-size: 2vh;
 	margin-right: 0vw;
 	margin-left: 0vw;
+}
+button.back {
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;	
+	width: 60px;
+	height: 46px;
+	margin: 0px;
+}
+.mp { text-align: center }
+.mp button{
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;	
+	font-size: 4vh;
+	box-shadow: none;
+	display:inline;
+	text-align:center;
+}
+.center {
+	text-align: center;
+}
+.column {
+	flex: 50%;
+}
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+h1.settings {
+	text-align: right;
+}
+.inst {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 2rem;
+}
+.powerups {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+	grid-gap: 2rem;
+}
+.powerups img {
+	width: 7rem;
+	display: inline;
 }
 li {
 	display: inline;
@@ -51,16 +105,14 @@ li {
 li.play{
 	display: block;
 }
-.blue_bkg {
-	background: var(--blue);
-	color: var(--yellow);
-	display: flex;
-	align-content: stretch;
-	min-height: 100vh;
+p {
+	margin: 0vh;
 }
-.center {
-	text-align: center;
+.title {
+	font-size: 3vh;
+	margin: 3vh;
 }
+
 
 #game .screen {
     width: 100%;

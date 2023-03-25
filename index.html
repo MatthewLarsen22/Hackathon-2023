@@ -32,10 +32,68 @@
 				<h1>Credits:</h1>
 				<button id="creditsBackButton">go back</button>
 			</div>
-			<div id="instructions" class="screen blue_bkg">
-				<h1 class = "center">instructions:</h1>
-				<button id="instructionsBackButton">go back</button>
-				<img src = "assets/singleplayer-instructions.png" alt="instructions" width="350" height="300"></img>
+			<div id="instructions" class="screen blue_bkg" style="padding:50px">
+				<div class = "flexbox">
+					<span style = "width:100px"> 
+						<button id="instructionsBackButton" class="back">
+							<img src="assets/backarrow.png" alt="back arrow" width = "50" height="40"></img>
+						</button>
+					</span>
+
+					<div style = "flex:1; text-align: center;"><h1>instructions:</h1></div>
+					<span style = "width: 100px"></span>
+				</div>
+				<div class="mp">
+					<button style = "color: #F06723">single player</button>
+					<button>multiplayer</button>
+				</div>
+				<div class="inst">
+					<div>
+						<p class = "title">Controls:</p>
+						<p class = "title"><img src = "assets/singleplayer-instructions.png" alt="instructions" width="350" height="300"></img></p>
+					</div>
+					<div>
+						<p class = "title">Powerups:</p class = "title">
+						<div class="powerups">
+							<div style="display: flex">
+								<img src="assets/extrabombcapacity.png"/>
+								<div style="font-size: 20px; padding-left: 1rem">
+									<p style="font-weight: bold">egg</p>
+									permanently increases player egg capacity by one
+								</div>
+							</div>
+							<div style="display: flex">
+								<img src="assets/kick.png"></img>
+								<div style="font-size: 20px; padding-left: 1rem">
+									<p style="font-weight: bold;">kick</p>
+									allows a player to kick eggs in their path away from them
+								</div>
+							</div>
+							<div style="display: flex">
+								<img src="assets/extrastrength.png"></img>
+								<div style="font-size: 20px; padding-left: 1rem">
+									<p style="font-weight: bold;">strength+</p>
+									gives extra fire power to the player's egg-splosives
+								</div>
+							</div>
+							<div style="display: flex">
+								<img src="assets/throw.png"></img>
+								<div style="font-size: 20px; padding-left: 1rem">
+									<p style="font-weight: bold;">throw</p>
+									allows player to pick up and throw egg over obstacles
+								</div>
+							</div>
+							<div style="display: flex">
+								<img src="assets/extraspeed.png"></img>
+								<div style="font-size: 20px; padding-left: 1rem">
+									<p style="font-weight: bold;">speed+</p>
+									gives a permanent boost of speed to the player
+								</div>
+							</div>
+							<span></span>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="highScores" class="screen blue_bkg">
 				<h1>high score:</h1>
