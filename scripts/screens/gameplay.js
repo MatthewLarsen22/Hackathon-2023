@@ -1,4 +1,4 @@
-MyGame.screens['gamePlay'] = (function(manager, input, graphics){
+MyGame.screens['gamePlay'] = (function(objects, manager, input, graphics){
     'use strict';
 
     let lastTimeStamp = performance.now();
@@ -6,17 +6,21 @@ MyGame.screens['gamePlay'] = (function(manager, input, graphics){
 
     let myKeyboard = input.Keyboard();
     let model = null;
+    let renderer = null;
 
     function processInput(elapsedTime) {
         myKeyboard.update(elapsedTime);
     }
 
     function update(elapsedTime) {
-
+        model.update(elapsedTime);
+        renderer.update(elapsedTime);
     }
 
     function render() {
         graphics.clear();
+
+        renderer.render(model, graphics);
     }
 
     function gameLoop(time) {
@@ -41,6 +45,9 @@ MyGame.screens['gamePlay'] = (function(manager, input, graphics){
     }
 
     function run() {
+        model = GameModel(myKeyboard, objects);
+        renderer = MyGame.render.Game(model, graphics);
+
         lastTimeStamp = performance.now();
         cancelNextRequest = false;
         requestAnimationFrame(gameLoop);
@@ -50,4 +57,4 @@ MyGame.screens['gamePlay'] = (function(manager, input, graphics){
         initialize: initialize,
         run: run
     };
-}(MyGame.manager, MyGame.input, MyGame.graphics));
+}(MyGame.objects, MyGame.manager, MyGame.input, MyGame.graphics));
