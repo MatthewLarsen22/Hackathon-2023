@@ -32,7 +32,11 @@ MyGame.screens['gamePlay'] = (function(graphics){
     }
 
     function initialize() {
+        myKeyboard.register('Escape', function() {
+            cancelNextRequest = true;
 
+            manager.showScreen('mainMenu');
+        });
     }
 
     function run() {
