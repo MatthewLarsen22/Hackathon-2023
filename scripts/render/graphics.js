@@ -32,7 +32,7 @@ MyGame.graphics = (function() {
         context.save();
 
         context.translate(center.x, center.y);
-        context.rotate(rotation);
+        context.rotate((rotation * Math.PI) / 180);
         context.translate(-center.x, -center.y);
 
         context.drawImage(
