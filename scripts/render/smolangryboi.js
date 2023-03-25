@@ -1,6 +1,6 @@
 MyGame.render.SmolAngryBoi = function(smolAngryBoi, graphics){
     let model = MyGame.render.AnimatedModel({
-        spriteSheet: 'assets/spritesheet-smolangryboi.png',
+        spriteSheet: 'assets/spritesheet-smolangryboi' + smolAngryBoi.id + '.png',
         spriteActionCount: 4,
         spriteFrameCount: 4,
         spriteTime: [[125, 125, 125, 125], [125, 125, 125, 125], [125, 125, 125, 125], [125, 125, 125, 125]],
