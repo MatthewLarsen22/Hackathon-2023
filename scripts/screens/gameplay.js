@@ -1,4 +1,4 @@
-MyGame.screens['gamePlay'] = (function(input, graphics){
+MyGame.screens['gamePlay'] = (function(manager, input, graphics){
     'use strict';
 
     let lastTimeStamp = performance.now();
@@ -8,7 +8,7 @@ MyGame.screens['gamePlay'] = (function(input, graphics){
     let model = null;
 
     function processInput(elapsedTime) {
-
+        myKeyboard.update(elapsedTime);
     }
 
     function update(elapsedTime) {
@@ -41,11 +41,13 @@ MyGame.screens['gamePlay'] = (function(input, graphics){
     }
 
     function run() {
-
+        lastTimeStamp = performance.now();
+        cancelNextRequest = false;
+        requestAnimationFrame(gameLoop);
     }
 
     return {
         initialize: initialize,
         run: run
     };
-}(MyGame.input, MyGame.graphics));
+}(MyGame.manager, MyGame.input, MyGame.graphics));
