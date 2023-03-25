@@ -1,10 +1,33 @@
+:root {
+	--blue: #425D8D;
+	--yellow: #F3D846;
+	--gray: #D9D5CE;
+	--tan: #C19952;
+	--orange: #F06723;
+	--green: #7AC582;
+}
+.blue_bkg {
+	background: var(--blue);
+	color: var(--yellow);
+	display: flex;
+	align-content: stretch;
+	min-height: 100vh;
+}
+.back {
+	padding: 15px;
+}
 body {
     font-family: "Quicksand";
 }
+body, html {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+}
 button {
     font-family: "Quicksand";
-	background-color: #D9D5CE;
-	color: #C19952;
+	background-color: var(--gray);
+	color: var(--tan);
 	border-radius: 1vh;
 	font-size: 2.5vh;
 	height: 4vh;
@@ -16,27 +39,78 @@ button {
 button.play{
 	background-color: rgba(0,0,0,0.0);
 	border-width: 0px;
-	color: #F3D846;
+	color: var(--yellow);
 	font-size: 7vh;
 	font-weight: bold;
 	width: 33vw;
 	height: 9vh;
+	display: inline;
 }
-h1.settings {
-	text-align: right;
-}
-button.settings{
+
+button.settings {
 	background-color: rgba(0,0,0,0.0);
 	border-width: 0px;	
 	font-size: 2vh;
 	margin-right: 0vw;
 	margin-left: 0vw;
 }
+button.back {
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;	
+	width: 60px;
+	height: 46px;
+	margin: 0px;
+}
+.mp { text-align: center }
+.mp button{
+	background-color: rgba(0,0,0,0.0);
+	border-width: 0px;	
+	font-size: 4vh;
+	box-shadow: none;
+	display:inline;
+	text-align:center;
+}
+.center {
+	text-align: center;
+}
+.column {
+	flex: 50%;
+}
+.flexbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+h1.settings {
+	text-align: right;
+}
+.inst {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 2rem;
+}
+.powerups {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+	grid-gap: 2rem;
+}
+.powerups img {
+	width: 7rem;
+	display: inline;
+}
 li {
 	display: inline;
 }
 li.play{
 	display: block;
+}
+p {
+	margin: 0vh;
+}
+.title {
+	font-size: 3vh;
+	margin: 3vh;
 }
 
 
@@ -50,7 +124,7 @@ li.play{
     display: block;
 }
 #mainMenu {
-	background-color: #425D8D;
+	background-color: var(--blue);
 	color: red;
 	text-align: center;
 	height: 100vh;
