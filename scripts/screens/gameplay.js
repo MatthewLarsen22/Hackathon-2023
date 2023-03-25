@@ -7,6 +7,7 @@ MyGame.screens['gamePlay'] = (function(objects, manager, input, graphics){
     let myKeyboard = input.Keyboard();
     let model = null;
     let renderer = null;
+    let song = null;
 
     function processInput(elapsedTime) {
         myKeyboard.update(elapsedTime);
@@ -35,16 +36,20 @@ MyGame.screens['gamePlay'] = (function(objects, manager, input, graphics){
             requestAnimationFrame(gameLoop);
         }
     }
-
     function initialize() {
+        song = document.createElement('audio');
         myKeyboard.register('Escape', function() {
             cancelNextRequest = true;
-
+            song.pause();
+            song.remove();
             manager.showScreen('mainMenu');
         });
     }
 
     function run() {
+        song.setAttribute('src', 'assets/Eggsplosion.mp3');
+        song.setAttribute('autoplay', 'autoplay');
+        song.setAttribute('loop', 'true');
         model = GameModel(myKeyboard, objects);
         renderer = MyGame.render.Game(model, graphics);
 

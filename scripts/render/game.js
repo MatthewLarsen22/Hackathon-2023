@@ -1,7 +1,6 @@
 MyGame.render.Game = function(model, graphics) {
     'use strict';
     let renderer = MyGame.render;
-
     let background = renderer.Background(graphics);
     let egg = renderer.Egg(graphics);
     let characters = [];
