@@ -1,12 +1,12 @@
-MyGame.screens['instructions'] = (function(manager) {
+MyGame.screens['instructionsmp'] = (function(manager) {
     'use strict';
-    document.getElementById('instBB').addEventListener(
+    document.getElementById('mpinstBB').addEventListener(
         'click',
         function() { manager.showScreen('mainMenu'); }
     );
-    document.getElementById('mpButton').addEventListener(
+    document.getElementById('spButton').addEventListener(
         'click',
-        function() { manager.showScreen('instructionsmp'); }
+        function() { manager.showScreen('instructions'); }
     );
     function initialize() {
 
