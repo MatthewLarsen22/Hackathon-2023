@@ -1,6 +1,6 @@
 MyGame.screens['credits'] = (function(manager) {
     'use strict';
-    document.getElementById('goBackButton').addEventListener(
+    document.getElementById('creditsBackButton').addEventListener(
         'click',
         function() { manager.showScreen('mainMenu'); }
     );

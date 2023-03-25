@@ -1,6 +1,6 @@
 MyGame.screens['instructions'] = (function(manager) {
     'use strict';
-    document.getElementById('goBackButton').addEventListener(
+    document.getElementById('instructionsBackButton').addEventListener(
         'click',
         function() { manager.showScreen('mainMenu'); }
     );
