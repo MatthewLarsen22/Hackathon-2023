@@ -42,25 +42,25 @@ The following items will be addressed if time permits:
 - etc.
 #### 5:00 Opening Keynote
 #### 6:00 Dinner / Start Coding
-- Set up project
-- Index.html (Iain)
-- Game.css (Iain/Matthew)
-- Design Menu Page Layout (Brynne)
-- Import Fonts (Matthew)
+- ~~Set up project~~
+- ~~Index.html (Iain)~~
+- ~~Game.css (Iain/Matthew)~~
+- ~~Design Menu Page Layout (Brynne)~~
+- ~~Import Fonts (Matthew)~~
 #### 7:00
 - Design Background and Barrier Blocks (Brynne)
-- Game Loop Setup (Matthew)
+- ~~Game Loop Setup (Matthew)~~
 - Main Menu (Iain)
-- Start on Sprite (Brynne)
+- ~~Start on Sprite (Brynne)~~
 #### 8:00
 - Instructions Page (Iain)
-- Rendering Stationary Character(s) (Matthew/Iain)
+- ~~Rendering Stationary Character(s) (Matthew/Iain)~~
 - Rendering Background (Iain / Matthew)
-- Get moving Sprite Sheet (up/down/left/right) (Brynne)
+- ~~Get moving Sprite Sheet (up/down/left/right) (Brynne)~~
 - Design Bombs and Boxes (Brynne)
 #### 9:00
 - Credits Page (Iain)
-- Character Movement (Matthew)
+- ~~Character Movement (Matthew)~~
 - Placing Bombs (No explosions yet) (Iain)
 - Placing Boxes (Nothing in them yet) (Matthew)
 - Design bomb explosion animation (Brynne)
